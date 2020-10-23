@@ -4,15 +4,15 @@ import { Card } from "react-bootstrap";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-class App extends Component {
+class test extends Component {
   constructor(props) {
     super(props);
     this.state = {
       person: {
         fullName: "Alouani ElHabib",
-        bio: "Full Stack Web Developer",
+        bio: "BI engineer",
         imgSrc: { Img },
-        profession: "BI engineer",
+        profession: "computer engineer",
         show: false,
       },
     };
@@ -36,29 +36,13 @@ class App extends Component {
   };
 
   toggledButon = () => {
-    const styleObject = {
-      color: "cyan",
-      textAlign: "center",
-      marginTop: "20px",
-    };
-    const styleObject2 = {
-      width: "18rem",
-      margin: "auto",
-      color: "grey",
-      marginTop: "50px",
-    };
-
     return (
-      <div className="btnToggled" style={styleObject}>
+      <div className="btnToggled">
         {this.state.person.show ? (
           <div>
             <p>{this.state.count} seconds since componentDidMount</p>
-            <Card style={styleObject2}>
-              <Card.Img
-                variant="top"
-                src={Img}
-                style={{ width: "50%", margin: "30px auto 0px" }}
-              />
+            <Card style={{ width: "18rem" }}>
+              <Card.Img variant="top" src={Img} />
               <Card.Body>
                 <Card.Title>{this.state.person.fullName}</Card.Title>
                 <Card.Text>{this.state.person.profession}</Card.Text>
@@ -74,10 +58,9 @@ class App extends Component {
   };
   render() {
     return (
-      <div className="App">
+      <div className="test">
         <button
-          style={{ margin: "50px" ,color: "black"}}
-          onClick={() => {
+          onClick={(e) => {
             this.handleClick();
           }}
           type="button"
@@ -91,6 +74,6 @@ class App extends Component {
   }
 }
 
-App.propTypes = {};
+test.propTypes = {};
 
-export default App;
+export default test;
